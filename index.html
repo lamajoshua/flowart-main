@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <style>
+        .wf-sawarabimincho { font-family: "Sawarabi Mincho"; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        ::-webkit-scrollbar { display: none; }
+        html { scrollbar-width: none; }
+        body { font-family: 'Sawarabi Mincho', 'Bricolage Grotesque', sans-serif; }
+
+        section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 4vw;
+            padding-top: clamp(2rem, 8vw, 4vw);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1.5rem;
+            transform-origin: bottom left;
+            will-change: transform;
+        }
+
+        .big { font-family: 'Sawarabi Mincho', 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 12vw, 14rem); font-weight: 400; line-height: .85; text-transform: uppercase; letter-spacing: -.02em; }
+        .sub { font-size: clamp(1rem, 2.5vw, 2rem); max-width: 50ch; line-height: 1.4; font-weight: 400; }
+        .tag { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; }
+        .right { text-align: right; align-self: flex-end; }
+        .bottom { margin-top: auto; }
+        hr { border: none; border-top: 1px solid currentColor; opacity: .6; margin: 2vw 0; }
+        .cols { display: flex; gap: 3vw; flex-wrap: wrap; }
+        .cols > div { flex: 1; min-width: 180px; }
+        .label { font-weight: 700; font-size: .85rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .5rem; }
+        .detail { font-size: clamp(.85rem, 1.3vw, 1.05rem); line-height: 1.5; opacity: .75; }
+
+        /* Section colors on containers */
+        .s1 .container { background: #E85A2B; color: #000; }
+        .s1 hr { border-color: #000; opacity: 1; }
+        .s2 .container { background: #000; color: #fff; }
+        .s3 .container { background: #F5F0E8; color: #000; }
+        .s4 .container { background: #1A3DE8; color: #fff; }
+        .s4 hr { border-color: rgba(255,255,255,.5); }
+        .s5 .container { background: #E8E02B; color: #000; }
+    </style>
+</head>
+<body>
+    <main>
+
+        <section class="s1">
+            <div class="container">
+                <p class="tag">01 — 私たちについて</p>
+                <hr>
+                <div>
+                    <h1 class="big">限界なく<br>創造する</h1>
+                </div>
+                <hr>
+                <p class="sub bottom">すべての表現者が創造性を第一に発揮できる場所を提供します。アルゴリズムやノイズに邪魔されることなく、純粋な作品とその表現者の声をお届けします。</p>
+            </div>
+        </section>
+
+        <section class="s2">
+            <div class="container">
+                <p class="tag">02 — ミッション</p>
+                <hr>
+                <div>
+                    <h2 class="big">常に<br>芸術を<br>中心に</h2>
+                </div>
+                <hr>
+                <div>
+                    <p class="sub">表現者の手によって構築されたグローバルコミュニティ。作品が見つけられ、共有され、正当に評価されるための仕組みを再定義します。</p>
+                </div>
+                <hr>
+                <div class="cols">
+                    <div>
+                        <p class="label">発見</p>
+                        <p class="detail">人の手によって厳選されたコレクション。機械的なおすすめではなく、人の感動を基準に素晴らしい作品を見つけ出します。</p>
+                    </div>
+                    <div>
+                        <p class="label">コミュニティ</p>
+                        <p class="detail">互いを高め合える仲間やメンターと出会い、制作活動を長年にわたって支え合う持続可能な関係を構築します。</p>
+                    </div>
+                    <div>
+                        <p class="label">価値の還元</p>
+                        <p class="detail">公正な価格設定と透明性の高い報酬構造。中間手数料を排除し、収益を表現者自身へと還元します。</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="cols">
+                    <div>
+                        <p class="label">展覧会</p>
+                        <p class="detail">世界中のネットワークを通じてオンラインおよびオフラインの企画展を開催。ギャラリーの障壁に阻まれることなく発信できます。</p>
+                    </div>
+                    <div>
+                        <p class="label">メンターシップ</p>
+                        <p class="detail">第一線で活躍する先達から直接学び、表現をビジネスとして成り立たせるための実践的なノウハウを身につけられます。</p>
+                    </div>
+                    <div>
+                        <p class="label">レジデンス</p>
+                        <p class="detail">世界各地での滞在制作プログラム。日常を離れ、集中して思考し新しい表現に挑戦できる時間と空間を提供します。</p>
+                    </div>
+                </div>
+                <hr>
+                <p class="sub bottom right">私たちが作る全ての機能は「表現者の助けになるか」という問いから始まります。</p>
+            </div>
+        </section>
+
+        <section class="s3">
+            <div class="container">
+                <p class="tag">03 — 仕組み</p>
+                <hr>
+                <div>
+                    <h2 class="big">自分を<br>表現し<br>際立つ</h2>
+                </div>
+                <hr>
+                <p class="sub">シンプルなステップで、あなたのクリエイティブな挑戦が今日から始まります。</p>
+                <hr>
+                <div class="cols">
+                    <div>
+                        <p class="label">01 — 投稿</p>
+                        <p class="detail">作品の登録はシンプル。シリーズや媒体ごとに分類し、あなたの意図通りの見せ方でポートフォリオを公開できます。</p>
+                    </div>
+                    <div>
+                        <p class="label">02 — 接続</p>
+                        <p class="detail">世界80カ国以上のコレクターやブランド、ギャラリーと直接つながり、あなたの作品を求める人々に届けます。</p>
+                    </div>
+                    <div>
+                        <p class="label">03 — 成長</p>
+                        <p class="detail">作品への反応や受注状況を一体化されたツールで管理。データに基づいた適切な判断で制作活動を支援します。</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="cols">
+                    <div>
+                        <p class="label">04 — 販売</p>
+                        <p class="detail">価格設定やライセンス管理を直感的に実行。外部サービスを介さず、自身のサイトから直接販売を行えます。</p>
+                    </div>
+                    <div>
+                        <p class="label">05 — 協働</p>
+                        <p class="detail">共同プロジェクトやスタジオの共有など、他のクリエイターとのコラボレーションを強力に後押しします。</p>
+                    </div>
+                    <div>
+                        <p class="label">06 — 進化</p>
+                        <p class="detail">作品の変化に合わせてプラットフォームも柔軟に対応。制作スタイルの進化に伴って最適な環境を提供します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <div class="container">
+                <p class="tag">04 — ビジョン</p>
+                <hr>
+                <div>
+                    <h2 class="big">芸術の<br>未来へ</h2>
+                </div>
+                <hr>
+                <div>
+                    <p class="sub">私たちは単なるプラットフォームではなく、新しい文化の波を創り出しています。</p>
+                </div>
+                <hr>
+                <div class="cols">
+                    <div>
+                        <p class="label">10,000人以上</p>
+                        <p class="detail">世界80カ国から参加する様々な分野の表現者が、次世代のクリエイティブの形を構築しています。</p>
+                    </div>
+                    <div>
+                        <p class="label">200万ドル以上</p>
+                        <p class="detail">初年度にクリエイターへ直接支払われた実績。透明性の高い取引で表現活動を直接サポートします。</p>
+                    </div>
+                    <div>
+                        <p class="label">100%</p>
+                        <p class="detail">クリエイター中心の運営。プラットフォームの意思決定には現役の表現者たちの声が反映されています。</p>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p class="sub">既存の仕組みを変革し、あらゆる表現者が自身の力で永続的に活動を行える環境を目指します。</p>
+                </div>
+                <hr>
+                <div class="cols">
+                    <div>
+                        <p class="label">オープンアクセス</p>
+                        <p class="detail">招待制や複雑な審査はありません。作品を創るすべての人が自由に参加できる開かれた場所です。</p>
+                    </div>
+                    <div>
+                        <p class="label">世界展開</p>
+                        <p class="detail">自動翻訳や多通貨対応により、公開した瞬間から世界120カ国以上の人々に作品が届きます。</p>
+                    </div>
+                    <div>
+                        <p class="label">還元重視</p>
+                        <p class="detail">売上の大半が直接制作者に還元され、持続可能なクリエイティブ・エコノミーを実現します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s5">
+            <div class="container">
+                <p class="tag">05 — 参加する</p>
+                <hr>
+                <div>
+                    <h2 class="big">今すぐ<br>始める</h2>
+                </div>
+                <hr>
+                <p class="sub bottom">表現の旅をここから始めましょう。新しい創造の可能性を共に切り拓いていきませんか。</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script> 
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const lenis = new Lenis();
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => lenis.raf(time * 1000));
+        gsap.ticker.lagSmoothing(0);
+
+        const sections = gsap.utils.toArray('section');
+
+        sections.forEach((section, i) => {
+            const container = section.querySelector('.container');
+
+            if (i > 0) {
+                gsap.set(container, { rotation: 30 });
+                gsap.to(container, {
+                    rotation: 0,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top bottom',
+                        end: 'top 25%',
+                        scrub: true,
+                    }
+                });
+            }
+
+            if (i < sections.length - 1) {
+                ScrollTrigger.create({
+                    trigger: section,
+                    start: 'bottom bottom',
+                    end: 'bottom top',
+                    pin: true,
+                    pinSpacing: false,
+                });
+            }
+        });
+    </script>
+</body>
+</html>
